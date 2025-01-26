@@ -18,9 +18,7 @@ function Home() {
       
       <div id='about-me' className="about-me section">
         <p className='about-me-text hi'>¡Hola!</p>
-        <p className='about-me-text'>Mi nombre es Ivo, soy un desarrollador web full-stack 
-        y estudiante de la tecnicatura universitaria en programación en la UTN (Mar del Plata). Estoy en constante búsqueda de
-        nuevos desafíos, ¡contactemos!</p>
+        <p className='about-me-text'>Soy Ivo. Soy un desarrollador web full-stack y estudiante de la tecnicatura en programación en la UTN de Mar del Plata. Busco constantemente nuevos desafíos y oportunidades para crecer.  </p>
         <div className="principal-habilities">
           <p className="title">Habilidades principales</p>
           <div className="habilities">

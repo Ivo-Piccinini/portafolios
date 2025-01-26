@@ -106,11 +106,6 @@ nav{
               .value:hover{
                 background-color: #0077ff5a;
               }
-              
-
-              
-
-              
               .value:focus::before,
               .value:active::before {
                 opacity: 1;
