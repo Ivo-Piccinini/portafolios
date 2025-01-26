@@ -8,11 +8,11 @@ function Navbar() {
   const menuRef = useRef(null);
   const { scrollToTop, scrollToElement } = useFunctions();
   const [divActual, setDivActual] = useState('');
+
   
     const detectarDivVisible = () => {
       const divs = ['home', 'about-me', 'experience', 'projects'];
       const alturaScroll = window.scrollY;
-  
       let divVisible = '';
   
       divs.forEach(id => {
@@ -32,18 +32,8 @@ function Navbar() {
       // Solo actualiza el estado si el div visible ha cambiado
       if (divVisible !== divActual) {
         setDivActual(divVisible);
-        console.log(`Estás en el div: ${divVisible}`);
       }
     };
-  
-    useEffect(() => {
-      window.addEventListener('scroll', detectarDivVisible);
-  
-      return () => {
-        window.removeEventListener('scroll', detectarDivVisible);
-      };
-    }, [divActual]);
-  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

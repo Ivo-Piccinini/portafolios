@@ -6,8 +6,16 @@ import djangoLogo from '../imgs/django.png';
 import Experience from './elements/Experience';
 import experienceData from '../data/experienceData';
 import Project from './elements/Project';
+import { useEffect } from 'react';
+import useFunctions from '../hooks/useFunctions';
 
 function Home() {
+
+  const { scrollToTop } = useFunctions();
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   
   return (
     <main>
