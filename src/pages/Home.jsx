@@ -1,26 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import criptomixImage from '../assets/criptomix_img.png'
 import fgvImage from '../assets/fgv_img.png'
 
-function Home() {
-  const [repositories, setRepositories] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchRepositories = async () => {
-      try {
-        const response = await fetch('https://api.github.com/users/Ivo-Piccinini/repos?sort=updated&per_page=6');
-        const data = await response.json();
-        setRepositories(data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching repositories:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchRepositories();
-  }, []);const skills = [
+function Home() {  const skills = [
     {
       name: 'JavaScript',
       icon: (
@@ -155,21 +137,21 @@ function Home() {
       title: "E-commerce App",
       description: "Aplicación de comercio electrónico completa con carrito de compras, sistema de pagos y panel de administración.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com/tuusuario/ecommerce",
+      github: "https://github.com/Ivo-Piccinini/portafolios",
       demo: "https://tu-ecommerce-demo.com"
     },
     {
       title: "Task Manager",
       description: "Aplicación de gestión de tareas con funcionalidades CRUD, autenticación de usuarios y colaboración en tiempo real.",
       technologies: ["React", "Express", "MySQL", "Socket.io"],
-      github: "https://github.com/tuusuario/task-manager",
+      github: "https://github.com/Ivo-Piccinini",
       demo: "https://tu-task-manager.com"
     },
     {
       title: "Weather App",
       description: "Aplicación del clima con pronósticos extendidos, geolocalización y diseño adaptativo.",
       technologies: ["JavaScript", "Tailwind CSS", "Weather API"],
-      github: "https://github.com/tuusuario/weather-app",
+      github: "https://github.com/Ivo-Piccinini",
       demo: "https://tu-weather-app.com"
     }
   ];
@@ -199,9 +181,8 @@ function Home() {
                 <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
               Descargar CV
-            </a>
-            <a 
-              href="https://github.com/tuusuario" 
+            </a>            <a 
+              href="https://github.com/Ivo-Piccinini" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="border-2 border-violet-400 text-violet-300 px-8 py-3 rounded-lg font-semibold hover:bg-violet-600 hover:text-white transition-all duration-300 hover:transform hover:-translate-y-1 flex items-center justify-center gap-3"
@@ -489,9 +470,8 @@ function Home() {
         </div>
       </section>{/* Footer */}
       <footer className="bg-black text-white py-8">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-gray-400">
-            © 2025 Tu Nombre. Todos los derechos reservados.
+        <div className="max-w-4xl mx-auto px-6 text-center">          <p className="text-gray-400">
+            © 2025 Ivo Piccinini. Todos los derechos reservados.
           </p>
         </div>
       </footer>
