@@ -1,6 +1,7 @@
 import React from 'react'
 import criptomixImage from '../assets/criptomix_img.png'
 import fgvImage from '../assets/fgv_img.png'
+import cvPdf from '../assets/ivo-piccinini_CV.pdf' 
 
 function Home() {  const skills = [
     {
@@ -113,56 +114,65 @@ function Home() {  const skills = [
   
     const experiences = [
     {
-      company: "Criptomix.com",
-      position: "Desarrollador Frontend",
-      period: "2023 - Presente",
-      description: "Desarrollo de aplicaciones web modernas utilizando React, implementación de interfaces de usuario responsivas y optimización de rendimiento.",
+      company: "Criptomix",
+      position: "Desarrollador Fullstack",
+      period: "Mayo 2024 - Presente",
+      description: "Desarrollo, optimización y mantenimiento de la plataforma de comercio electrónico Criptomix, enfocándome en la integración de pagos y la experiencia del usuario.",
       projectImage: criptomixImage,
       projectName: "Criptomix"
     },    
     {
-      company: "Empresa Anterior",
-      position: "Desarrollador Junior",
-      period: "2022 - 2023",
-      description: "Participación en proyectos de desarrollo web, colaboración en equipo y aprendizaje de tecnologías modernas.",
+      company: "FGV",
+      position: "Desarrollador Fullstack",
+      period: "Feb 2025 - Presente",
+      description: "Desarrollo, optimización y mantenimiento del website del estudio fotográfico FGV, enfocándome en el registro de turnos y la visibilización de la marca.",
       projectImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%2310b981'/%3E%3Ctext x='150' y='105' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3EApp Mobile%3C/text%3E%3C/svg%3E",
-      projectName: "Aplicación Móvil"
+      projectName: "FGV"
     },
     {
       company: "Freelance",
       position: "Desarrollador Web",
-      period: "2021 - 2022",
+      period: "2023 - Presente",
       description: "Desarrollo de sitios web personalizados para pequeñas empresas, enfoque en diseño responsive y experiencia de usuario.",
       projectImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23f59e0b'/%3E%3Ctext x='150' y='105' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3EWeb Corporativa%3C/text%3E%3C/svg%3E",
       projectName: "Web Corporativa"
-    }
+    },
+    {
+      company: "Freelance",
+      position: "Desarrollador de automatizaciones con IA",
+      period: "2024 - Presente",
+      description: "Desarrollo de automatizaciones personalizadas utilizando n8n, integrando diversas APIs y servicios para optimizar flujos de trabajo.",
+      projectImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23f59e0b'/%3E%3Ctext x='150' y='105' font-family='Arial, sans-serif' font-size='16' fill='white' text-anchor='middle'%3EWeb Corporativa%3C/text%3E%3C/svg%3E",
+      projectName: "Web Corporativa"
+    },
   ];
 
   const projects = [
     {
-      title: "E-commerce App",
-      description: "Aplicación de comercio electrónico completa con carrito de compras, sistema de pagos y panel de administración.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com/Ivo-Piccinini/portafolios",
-      demo: "https://tu-ecommerce-demo.com"
+      title: "Administrador financiero",
+      description: "Aplicación web para gestionar finanzas personales, con funcionalidades de seguimiento de gastos y funcionalidades CRUD.",
+      technologies: ["React", "Javascript", "Vite"],
+      github: "https://github.com/Ivo-Piccinini/Vite-Money-Manager",
+      demo: "https://vite-money-manager.netlify.app/"
     },
     {
-      title: "Task Manager",
-      description: "Aplicación de gestión de tareas con funcionalidades CRUD, autenticación de usuarios y colaboración en tiempo real.",
-      technologies: ["React", "Express", "MySQL", "Socket.io"],
-      github: "https://github.com/Ivo-Piccinini",
-      demo: "https://tu-task-manager.com"
+      title: "Administrador de Veterinaria",
+      description: "Aplicación de gestión de veterinaria, con funcionalidades de gestión de pacientes, dueños y citas.",
+      technologies: ["React", "Javascript", "Vite"],
+      github: "https://github.com/Ivo-Piccinini/Vet-Vite",
+      demo: "https://vet-vite.netlify.app/"
     },
     {
-      title: "Weather App",
-      description: "Aplicación del clima con pronósticos extendidos, geolocalización y diseño adaptativo.",
-      technologies: ["JavaScript", "Tailwind CSS", "Weather API"],
-      github: "https://github.com/Ivo-Piccinini",
-      demo: "https://tu-weather-app.com"
+      title: "Todo List",
+      description: "Gestor de tareas simple y efectivo, con funcionalidades de agregar, eliminar y marcar tareas como completadas.",
+      technologies: ["React", "Javascript", "Vite"],
+      github: "https://github.com/Ivo-Piccinini/todo-machine",
+      demo: "https://todo-machine-react.netlify.app/"
     }
   ];
 
-  return (    <div className="min-h-screen bg-gray-900">
+  return (    
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900 to-violet-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-6">
@@ -176,18 +186,17 @@ function Home() {  const skills = [
             Desarrollador apasionado por crear experiencias web modernas y funcionales. 
             Especializado en React y tecnologías frontend, con enfoque en código limpio y 
             diseño responsive que brinde la mejor experiencia de usuario.
-          </p>          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
-            <a 
-              href="/cv.pdf" 
-              download 
+          </p>            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">            <a 
+              href={cvPdf} 
+              download="Ivo_Piccinini_CV.pdf"
               className="bg-violet-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-700 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-3"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
               Descargar CV
-            </a>            <a 
+            </a>
+            <a 
               href="https://github.com/Ivo-Piccinini" 
               target="_blank" 
               rel="noopener noreferrer" 
@@ -199,7 +208,7 @@ function Home() {  const skills = [
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/tuusuario" 
+              href="https://www.linkedin.com/in/ivo-piccinini-7423a324b/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="border-2 border-violet-400 text-violet-300 px-8 py-3 rounded-lg font-semibold hover:bg-violet-600 hover:text-white transition-all duration-300 hover:transform hover:-translate-y-1 flex items-center justify-center gap-3"
@@ -211,7 +220,8 @@ function Home() {  const skills = [
             </a>
           </div>
         </div>
-      </section>      {/* Experience Section */}
+      </section>      
+      {/* Experience Section */}
       <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
@@ -223,7 +233,8 @@ function Home() {  const skills = [
                   style={{
                     transformStyle: 'preserve-3d'
                   }}
-                >                  {/* Frente de la tarjeta */}
+                >                  
+                {/* Frente de la tarjeta */}
                   <div 
                     className="absolute inset-0 w-full h-full bg-gray-800 p-8 rounded-2xl shadow-lg border-l-4 border-violet-500"
                     style={{backfaceVisibility: 'hidden'}}
@@ -243,41 +254,33 @@ function Home() {  const skills = [
                     <div className="absolute bottom-4 right-4 text-gray-500 text-sm">
                       Hover para ver proyecto
                     </div>
-                  </div>                  {/* Reverso de la tarjeta */}
-                  <div 
+                  </div>                  
+                  {/* Reverso de la tarjeta */}                  <div 
                     className={`absolute inset-0 w-full h-full p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center text-white ${
-                      index === 1 || index === 2 
-                        ? 'bg-gradient-to-br from-gray-600 to-gray-800' 
-                        : 'bg-gradient-to-br from-violet-600 to-purple-800'
+                      index === 0 
+                        ? 'bg-gradient-to-br from-violet-600 to-purple-800' 
+                        : 'bg-gradient-to-br from-gray-600 to-gray-800'
                     }`}
                     style={{
                       backfaceVisibility: 'hidden',
                       transform: 'rotateY(180deg)'
                     }}
-                  >
-                    {index === 1 ? (
-                      // Segunda tarjeta - Próximamente con imagen FGV
+                  >                    
+                  {index === 1 ? (
+                      // Segunda tarjeta - Próximamente sin imagen
                       <div className="flex flex-col items-center justify-center h-full text-center">
-                        <div className="w-20 h-20 mb-4 rounded-full bg-gray-500 flex items-center justify-center">
+                        <div className="w-20 h-20 mb-6 rounded-full bg-gray-500 flex items-center justify-center">
                           <svg className="w-10 h-10 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                           </svg>
                         </div>
-                        <h3 className="text-xl font-bold mb-2 text-gray-200">
+                        <h3 className="text-2xl font-bold mb-2 text-gray-200">
                           Próximamente
                         </h3>
-                        <p className="text-xs text-gray-400 opacity-90 mb-3">
+                        <p className="text-sm text-gray-400 opacity-90">
                           Proyecto en desarrollo
-                        </p>                        {/* Imagen FGV */}
-                        <div className="w-full h-20 rounded-lg overflow-hidden">
-                          <img 
-                            src={fgvImage || '/fgv_img.png'} 
-                            alt="FGV"
-                            className="w-full h-full object-contain"
-                          />
-                        </div>
-                      </div>
-                    ) : index === 2 ? (
+                        </p>
+                      </div>                    ) : index === 2 ? (
                       // Tercera tarjeta - Próximamente sin imagen
                       <div className="flex flex-col items-center justify-center h-full text-center">
                         <div className="w-20 h-20 mb-6 rounded-full bg-gray-500 flex items-center justify-center">
@@ -292,9 +295,28 @@ function Home() {  const skills = [
                           Proyecto en desarrollo
                         </p>
                       </div>
-                    ) : (                      // Primera tarjeta con contenido normal
+                    ) : index === 3 ? (
+                      // Cuarta tarjeta - Próximamente sin imagen
+                      <div className="flex flex-col items-center justify-center h-full text-center">
+                        <div className="w-20 h-20 mb-6 rounded-full bg-gray-500 flex items-center justify-center">
+                          <svg className="w-10 h-10 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <h3 className="text-2xl font-bold mb-2 text-gray-200">
+                          Próximamente
+                        </h3>
+                        <p className="text-sm text-gray-400 opacity-90">
+                          Proyecto en desarrollo
+                        </p>
+                      </div>                    
+                    ) : index === 0 ? (
+                      // Primera tarjeta - Criptomix con contenido normal
                       <>
-                        <div className="w-full h-40 mb-4 rounded-lg overflow-hidden">
+                        <div 
+                          className="w-full h-40 mb-4 rounded-lg overflow-hidden cursor-pointer"
+                          onClick={() => window.open("https://criptomix.com/", '_blank')}
+                        >
                           <img 
                             src={criptomixImage || '/criptomix_img.png'} 
                             alt="Criptomix"
@@ -308,7 +330,7 @@ function Home() {  const skills = [
                           Proyecto realizado en {exp.company}
                         </p>
                       </>
-                    )}
+                    ) : null}
                   </div>
                 </div>
               </div>
